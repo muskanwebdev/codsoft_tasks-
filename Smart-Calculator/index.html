@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090d18">
+    <title>SmartCalc - Premium Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-icon">✳</div>
+                <div>
+                    <h1>SmartCalc</h1>
+                    <p>YOUR EVERYDAY CALCULATOR</p>
+                </div>
+            </div>
+            <span class="status"><span></span> READY</span>
+        </header>
+
+        <section class="calculator">
+            <div class="calculator-heading">
+                <div>
+                    <span class="eyebrow">CALCULATOR</span>
+                    <h2>Let's calculate.</h2>
+                </div>
+                <div class="heading-symbol">＋</div>
+            </div>
+
+            <div class="display">
+                <div class="display-top">
+                    <span>INPUT</span>
+                    <button id="copy-btn" class="copy-btn" title="Copy result">COPY</button>
+                </div>
+                <div id="expression" class="expression">0</div>
+                <div id="result" class="result">0</div>
+                <div id="message" class="message">Ready for your calculation</div>
+            </div>
+
+
+            <div class="keypad">
+                <button class="key utility" data-action="clear">AC</button>
+                <button class="key utility" data-action="delete">DEL</button>
+                <button class="key utility" data-value="(">(</button>
+                <button class="key utility" data-value=")">)</button>
+                <button class="key operator" data-value="/">÷</button>
+
+                <button class="key" data-value="7">7</button>
+                <button class="key" data-value="8">8</button>
+                <button class="key" data-value="9">9</button>
+                <button class="key utility" data-value="%">%</button>
+                <button class="key operator" data-value="*">×</button>
+
+                <button class="key" data-value="4">4</button>
+                <button class="key" data-value="5">5</button>
+                <button class="key" data-value="6">6</button>
+                <button class="key operator" data-value="-">−</button>
+                <button class="key operator" data-value="+">+</button>
+
+                <button class="key" data-value="1">1</button>
+                <button class="key" data-value="2">2</button>
+                <button class="key" data-value="3">3</button>
+                <button class="key" data-value="0">0</button>
+                <button class="key" data-value=".">.</button>
+
+                <button class="key equals" data-action="equals">=</button>
+            </div>
+
+
+            <div class="keyboard-hint">
+                <span>⌨ Keyboard supported</span>
+                <span>ESC to clear · Enter to calculate</span>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="history-heading">
+                <div>
+                    <span class="eyebrow">YOUR ACTIVITY</span>
+                    <h2>Recent calculations</h2>
+                </div>
+                <button id="clear-history" class="clear-history">CLEAR ALL</button>
+            </div>
+            <div id="history-list" class="history-list">
+                <p class="empty-history">Your calculations will appear here.</p>
+            </div>
+        </section>
+
+        <footer>
+            <span>SMARTCALC <span class="footer-dot">●</span> MADE WITH HTML, CSS & JS</span>
+            <span>CALCULATE SMARTER.</span>
+        </footer>
+    </main>
+
+    <div id="toast" class="toast">Copied!</div>
+
+</body>
+
+</html>
